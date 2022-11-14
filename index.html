@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Diffusion</title>
+</head>
+
+<body>
+    <div class="simulator-box-parent">
+        <div class="simulator-box">
+        </div>
+        <div class="ruler">
+            <hr/>
+            35nm
+        </div>
+        <form id="form">
+            <fieldset>
+                <legend>
+                    Simulation input data
+                </legend>
+                <div class="field">
+                    <label for="initialMolecules">
+                        Initial sodium molecules (mol):
+                    </label>
+                    <input type="number" id="initialMolecules"
+                        value="0" step="0.001"
+                        min="0" max="1"
+                    >
+                </div>
+                <div class="field">
+                    <label for="temperature">
+                        Absolute temperature (K):
+                    </label>
+                    <input type="number" value="298" id="temperature">
+                </div>
+                <div class="field">
+                    <label for="proteins">
+                        Amount of trans-membrane proteins:
+                    </label>
+                    <input type="number" value="0" id="proteins">
+                </div>
+            </fieldset>
+            <button>Start simulation</button>
+        </form>
+    </div>
+    <!-- 
+        Load Order (There are dependencies):
+        utils/LinkedList.js
+        utils/randomDistribution.js
+        
+        diffusion.js
+    -->
+    <!-- Utils for diffusion.js -->
+    <script src="./utils/LinkedList.js"></script>
+    <script src="./utils/randomDistribution.js"></script>
+
+    <!-- DOM Modifiers -->
+    <script src="./divCreator.js"></script>
+    <!-- Main script -->
+    <script src="./diffusion.js"></script>
+</body>
+
+</html>

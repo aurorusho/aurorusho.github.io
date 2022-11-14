@@ -1,0 +1,59 @@
+.simulator-box-parent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ruler, .simulator-box {
+    width: 90%;
+}
+.ruler {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-left: 1px black solid;
+    border-right: 1px black solid;
+    text-align: center;
+    font-size: 0.8em;
+}
+.simulator-box {
+    display: grid;
+    height: 200px;
+}
+
+.simulator-box div {
+    height: 100%;
+}
+
+
+.membrane-element {
+    background-color: blue;
+}
+.membrane-element:hover{
+    background-color: rgb(57, 57, 245);
+}
+.solution {
+    background-color: red;
+}
+.solution:hover {
+    background-color: rgb(245, 57, 57);
+}
+form {
+    margin-top: 5vh;
+}
+
+.field {
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    display: flex;
+    justify-content: space-between;
+}
+.ruler-information, .area-ruler {
+    display: flex;
+    align-items: center;
+}
+
+.area-ruler {
+    background: linear-gradient(#000, #000) no-repeat center/2px 100%;
+    border-top: 2px black solid;
+    border-bottom: 2px black solid;
+
+}
