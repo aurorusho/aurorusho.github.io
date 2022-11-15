@@ -1,10 +1,10 @@
-const VISIBLE_DIVISIONS = 35;
+const VISIBLE_DIVISIONS = 147;
 
 const simulatorBox = document.querySelector("div.simulator-box");
 simulatorBox.style["grid-template-columns"] = `repeat(${VISIBLE_DIVISIONS}, 1fr)`;
 
-const LOWER_BOUND = 14;
-const HIGHER_BOUND= 20;
+const LOWER_BOUND = 70;
+const HIGHER_BOUND= 76;
 
 for(let i = 0; i < VISIBLE_DIVISIONS; i++){
     const newDiv = document.createElement("div");

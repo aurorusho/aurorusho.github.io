@@ -14,9 +14,13 @@
         <div class="simulator-box">
         </div>
         <div class="ruler">
-            <hr/>
-            35nm
+            <hr />
+            147nm
         </div>
+        <h1>
+            Diffusion simulator
+        </h1>
+        <a href="">About this simulator</a>
         <form id="form">
             <fieldset>
                 <legend>
@@ -24,12 +28,15 @@
                 </legend>
                 <div class="field">
                     <label for="initialMolecules">
-                        Initial sodium molecules (mol):
+                        Initial sodium molecules outside layer (mol):
                     </label>
-                    <input type="number" id="initialMolecules"
-                        value="0" step="0.001"
-                        min="0" max="1"
-                    >
+                    <input type="number" id="initialMolecules" value="0" step="0.0000001" min="0">
+                </div>
+                <div class="field">
+                    <label for="innerMolecules">
+                        Initial sodium molecules inside layer (mol):
+                    </label>
+                    <input type="number" id="innerMolecules" value="0" step="0.0000001" min="0">
                 </div>
                 <div class="field">
                     <label for="temperature">
@@ -39,27 +46,38 @@
                 </div>
                 <div class="field">
                     <label for="proteins">
-                        Amount of trans-membrane proteins:
+                        Trans-membrane protein amount:
                     </label>
                     <input type="number" value="0" id="proteins">
                 </div>
             </fieldset>
             <button>Start simulation</button>
         </form>
+        <div class="dataLabel">
+            Data
+        </div>
+        <div class="data">
+        </div>
+
     </div>
     <!-- 
         Load Order (There are dependencies):
-        utils/LinkedList.js
-        utils/randomDistribution.js
-        
-        diffusion.js
+        utils/diffusionCoefficient.js
+        utils/ficksLaw.js
+
+        ./divCreator.js
+        ./addData.js
+        ./diffusion.js
     -->
     <!-- Utils for diffusion.js -->
-    <script src="./utils/LinkedList.js"></script>
-    <script src="./utils/randomDistribution.js"></script>
+    <!-- <script src="./utils/LinkedList.js"></script>
+    <script src="./utils/randomDistribution.js"></script> -->
 
+    <script src="./utils/diffusionCoefficient.js"></script>
+    <script src="./utils/ficksLaw.js"></script>
     <!-- DOM Modifiers -->
     <script src="./divCreator.js"></script>
+    <script src="./addData.js"></script>
     <!-- Main script -->
     <script src="./diffusion.js"></script>
 </body>

@@ -57,3 +57,18 @@ form {
     border-bottom: 2px black solid;
 
 }
+.dataLabel {
+    border: 1px black solid;
+    width: 50%;
+    text-align: center;
+    margin-top: 5vh;
+}
+.data {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 50%;
+}
+.data div {
+    text-align: center;
+    border: 1px black solid;
+}
